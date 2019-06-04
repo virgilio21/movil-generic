@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="nav_header">
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+    </style>
+
+</resources>
