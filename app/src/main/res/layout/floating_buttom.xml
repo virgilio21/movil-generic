@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,11 +7,14 @@
     android:layout_height="match_parent">
 
 
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15dp"
+        android:id="@+id/btnCarrito"
+        android:textAlignment="center"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" android:id="@+id/contenedor"/>
 
-    <include layout="@layout/floating_buttom"/>
 
 </android.support.design.widget.CoordinatorLayout>
