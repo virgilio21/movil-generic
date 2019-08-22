@@ -1,0 +1,106 @@
+<android.support.v7.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardOrder"
+    style="@style/CardView.Light"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="40dp"
+            android:layout_height="41dp"
+            android:background="null"
+            app:srcCompat="@drawable/icons8_eliminar_64"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="8dp" />
+
+        <ImageView
+            android:id="@+id/pictureProduct"
+            android:layout_width="262dp"
+            android:layout_height="135dp"
+            tools:layout_editor_absoluteX="-2dp"
+            tools:layout_editor_absoluteY="58dp"
+            tools:srcCompat="@drawable/cheetos" />
+
+        <TextView
+            android:id="@+id/nameProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Chettos quebraditos 200gr"
+            android:textColor="@android:color/black"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/priceProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="$20"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="199dp"
+            tools:layout_editor_absoluteY="211dp" />
+
+        <TextView
+            android:id="@+id/priceTotalProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="$200"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="12dp"
+            tools:layout_editor_absoluteX="198dp"
+            tools:layout_editor_absoluteY="231dp" />
+
+        <TextView
+            android:id="@+id/nameCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Farmacias del Bazar Pensiones"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textSize="11dp"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="30dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="null"
+            app:srcCompat="@drawable/icons8_menos_64"
+            tools:layout_editor_absoluteX="7dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="null"
+            app:srcCompat="@drawable/icons8_rh_plus_64"
+            tools:layout_editor_absoluteX="114dp"
+            tools:layout_editor_absoluteY="210dp" />
+
+        <TextView
+            android:id="@+id/amountProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="10"
+            android:textColor="@android:color/black"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="71dp"
+            tools:layout_editor_absoluteY="215dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
