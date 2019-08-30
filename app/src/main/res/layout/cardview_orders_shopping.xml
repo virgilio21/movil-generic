@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <ImageButton
-            android:id="@+id/imageButton"
+            android:id="@+id/imageButtonRemove"
             android:layout_width="40dp"
             android:layout_height="41dp"
             android:background="null"
@@ -73,7 +73,7 @@
             tools:layout_editor_absoluteY="30dp" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/imageButtonLess"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="null"
@@ -82,7 +82,7 @@
             tools:layout_editor_absoluteY="210dp" />
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/imageButtonPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="null"

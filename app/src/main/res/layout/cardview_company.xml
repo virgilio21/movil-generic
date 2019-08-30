@@ -1,0 +1,115 @@
+<android.support.v7.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardCompany"
+    style="@style/CardView.Light"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="13dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:id="@+id/pictureProduct"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            tools:layout_editor_absoluteX="-2dp"
+            tools:layout_editor_absoluteY="58dp"
+            tools:srcCompat="@drawable/compan_ias_de_gas_natural"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/textViewNameCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tendejon La esperanza"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18dp"
+            tools:layout_editor_absoluteX="104dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textViewUbication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubacición:"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="49dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <TextView
+            android:id="@+id/textViewValueCalle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calle 19 320 Juan Pablo"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="174dp"
+            tools:layout_editor_absoluteY="220dp" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonMap"
+            android:layout_width="50dp"
+            android:layout_height="56dp"
+            android:background="null"
+            app:srcCompat="@drawable/icons8_mapa_de_pin_64"
+            tools:layout_editor_absoluteX="290dp"
+            tools:layout_editor_absoluteY="255dp">
+
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/TextViewHomeService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servicio a domicilio: "
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="253dp" />
+
+        <TextView
+            android:id="@+id/textViewYesOrNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Si"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="253dp" />
+
+        <ImageButton
+            android:id="@+id/ImageButtonProducts"
+            android:layout_width="47dp"
+            android:layout_height="44dp"
+            android:background="null"
+            app:srcCompat="@drawable/icons8_producto_usado_64"
+            tools:layout_editor_absoluteX="191dp"
+            tools:layout_editor_absoluteY="283dp" />
+
+        <TextView
+            android:id="@+id/textViewVerProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver Productos -->"
+            android:textColor="@android:color/background_dark"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="295dp" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
