@@ -18,87 +18,120 @@
 
         <ImageButton
             android:id="@+id/imageButtonRemove"
-            android:layout_width="40dp"
+            android:layout_width="wrap_content"
             android:layout_height="41dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
             android:background="null"
-            app:srcCompat="@drawable/icons8_eliminar_64"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="8dp" />
-
-        <ImageView
-            android:id="@+id/pictureProduct"
-            android:layout_width="262dp"
-            android:layout_height="135dp"
-            tools:layout_editor_absoluteX="-2dp"
-            tools:layout_editor_absoluteY="58dp"
-            tools:srcCompat="@drawable/cheetos" />
-
-        <TextView
-            android:id="@+id/nameProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="Chettos quebraditos 200gr"
-            android:textColor="@android:color/black"
-            tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <TextView
-            android:id="@+id/priceProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="$20"
-            android:textColor="@android:color/black"
-            android:textSize="12dp"
-            tools:layout_editor_absoluteX="199dp"
-            tools:layout_editor_absoluteY="211dp" />
-
-        <TextView
-            android:id="@+id/priceTotalProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="$200"
-            android:textColor="@android:color/holo_red_dark"
-            android:textSize="12dp"
-            tools:layout_editor_absoluteX="198dp"
-            tools:layout_editor_absoluteY="231dp" />
-
-        <TextView
-            android:id="@+id/nameCompany"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:text="Farmacias del Bazar Pensiones"
-            android:textColor="@android:color/tertiary_text_light"
-            android:textSize="11dp"
-            tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="30dp" />
+            app:layout_constraintBottom_toTopOf="@+id/nameCompany"
+            app:layout_constraintEnd_toStartOf="@+id/nameProduct"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nameCompany"
+            app:srcCompat="@drawable/icons8_eliminar_64" />
 
         <ImageButton
             android:id="@+id/imageButtonLess"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="9dp"
             android:background="null"
-            app:srcCompat="@drawable/icons8_menos_64"
-            tools:layout_editor_absoluteX="7dp"
-            tools:layout_editor_absoluteY="210dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/icons8_menos_64" />
 
         <ImageButton
             android:id="@+id/imageButtonPlus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="9dp"
             android:background="null"
-            app:srcCompat="@drawable/icons8_rh_plus_64"
-            tools:layout_editor_absoluteX="114dp"
-            tools:layout_editor_absoluteY="210dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/icons8_rh_plus_64" />
+
+        <ImageView
+            android:id="@+id/pictureProduct"
+            android:layout_width="0dp"
+            android:layout_height="135dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/cheetos" />
+
+        <TextView
+            android:id="@+id/priceTotalProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
+            android:text="$200"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceProduct" />
+
+        <TextView
+            android:id="@+id/nameCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="9dp"
+            android:text="Farmacias del Bazar Pensiones"
+            android:textColor="@android:color/tertiary_text_light"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toTopOf="@+id/pictureProduct"
+            app:layout_constraintStart_toStartOf="@+id/nameProduct" />
+
+        <TextView
+            android:id="@+id/nameProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginBottom="9dp"
+            android:text="Chettos quebraditos 200gr"
+            android:textColor="@android:color/black"
+            app:layout_constraintBottom_toTopOf="@+id/nameCompany"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonRemove"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/priceProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="21dp"
+            android:text="$20"
+            android:textColor="@android:color/black"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/priceTotalProduct"
+            app:layout_constraintTop_toBottomOf="@+id/pictureProduct" />
 
         <TextView
             android:id="@+id/amountProduct"
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="71dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:text="10"
             android:textColor="@android:color/black"
             android:textSize="14dp"
-            tools:layout_editor_absoluteX="71dp"
-            tools:layout_editor_absoluteY="215dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonPlus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonPlus" />
 
 
     </android.support.constraint.ConstraintLayout>
