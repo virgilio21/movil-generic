@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-public class Adaptador extends RecyclerView.Adapter<viewHolder> implements View.OnClickListener{
+public class Adapter extends RecyclerView.Adapter<viewHolder> implements View.OnClickListener{
 
-    List<Fuente> ListaObjetos;
+    List<Source> ListaObjetos;
     private View.OnClickListener listener;
 
-    public Adaptador(List<Fuente> listaObjetos) {
+    public Adapter(List<Source> listaObjetos) {
         ListaObjetos = listaObjetos;
     }
 
@@ -27,9 +27,9 @@ public class Adaptador extends RecyclerView.Adapter<viewHolder> implements View.
 
     @Override
     public void onBindViewHolder(@NonNull viewHolder viewHolder, int position) {
-        viewHolder.titulo.setText(ListaObjetos.get(position).getTitulo()+" - ");
+        viewHolder.titulo.setText(ListaObjetos.get(position).getCompany()+" - "+ListaObjetos.get(position).getProduct());
         viewHolder.imagen.setImageResource(ListaObjetos.get(position).getImagen());
-        viewHolder.precio.setText("Precio: $"+ListaObjetos.get(position).getPrecio());
+        viewHolder.precio.setText("Precio: $"+ListaObjetos.get(position).getPrice());
         viewHolder.ranking.setText("Ranking: "+ListaObjetos.get(position).getRanking());
     }
 
