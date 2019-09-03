@@ -99,7 +99,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     public void goCreateAccount(View view){
 
         Toast.makeText(this,"Hola Mundo",Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(this,CreateAccount.class);
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 
@@ -341,7 +341,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                Intent intent =  new Intent(this.login,HomeActivity.class);
+                Intent intent =  new Intent(this.login,MainActivity.class);
                 startActivity(intent);
                 //finish();
             } else {
@@ -357,4 +357,5 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 }
+
 
