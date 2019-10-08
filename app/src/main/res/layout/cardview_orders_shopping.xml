@@ -5,59 +5,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardOrder"
     style="@style/CardView.Light"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="8dp"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="25dp">
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
         <ImageButton
             android:id="@+id/imageButtonRemove"
-            android:layout_width="wrap_content"
-            android:layout_height="41dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
-            android:background="null"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginRight="37dp"
+            android:background="@drawable/borde_redondo"
             app:layout_constraintBottom_toTopOf="@+id/nameCompany"
             app:layout_constraintEnd_toStartOf="@+id/nameProduct"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/nameCompany"
-            app:srcCompat="@drawable/icons8_eliminar_64" />
+            app:layout_constraintVertical_bias="0.857"
+            android:elevation="3dp"
+            android:translationZ="3dp"
+            android:stateListAnimator="@null"
+            app:srcCompat="@drawable/ic_delete" />
 
         <ImageButton
             android:id="@+id/imageButtonLess"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="7dp"
-            android:layout_marginLeft="7dp"
-            android:layout_marginBottom="9dp"
-            android:background="null"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/borde_redondo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/icons8_menos_64" />
+            android:elevation="3dp"
+            android:translationZ="3dp"
+            android:stateListAnimator="@null"
+            app:srcCompat="@drawable/ic_remove" />
 
         <ImageButton
             android:id="@+id/imageButtonPlus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="9dp"
-            android:background="null"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/borde_redondo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.391"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/icons8_rh_plus_64" />
+            android:elevation="3dp"
+            android:translationZ="3dp"
+            android:stateListAnimator="@null"
+            app:srcCompat="@drawable/ic_add"
+
+            />
 
         <ImageView
             android:id="@+id/pictureProduct"
             android:layout_width="0dp"
-            android:layout_height="135dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +87,9 @@
             android:layout_marginEnd="36dp"
             android:layout_marginRight="36dp"
             android:text="$200"
-            android:textColor="@android:color/holo_red_dark"
+            android:padding="3dp"
+            android:background="@color/labelGray"
+            android:textColor="@color/primaryText"
             android:textSize="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -82,9 +99,9 @@
             android:id="@+id/nameCompany"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_marginBottom="9dp"
+            android:layout_marginBottom="8dp"
             android:text="Farmacias del Bazar Pensiones"
-            android:textColor="@android:color/tertiary_text_light"
+            android:textColor="@color/secondaryText"
             android:textSize="11dp"
             app:layout_constraintBottom_toTopOf="@+id/pictureProduct"
             app:layout_constraintStart_toStartOf="@+id/nameProduct" />
@@ -93,45 +110,52 @@
             android:id="@+id/nameProduct"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginRight="22dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginRight="96dp"
             android:layout_marginBottom="9dp"
             android:text="Chettos quebraditos 200gr"
-            android:textColor="@android:color/black"
+            android:textColor="@color/primaryText"
             app:layout_constraintBottom_toTopOf="@+id/nameCompany"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageButtonRemove"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/priceProduct"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
             android:layout_marginTop="17dp"
             android:layout_marginBottom="21dp"
             android:text="$20"
-            android:textColor="@android:color/black"
+            android:padding="3dp"
+            android:background="@color/labelGray"
+            android:textColor="@color/primaryText"
             android:textSize="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/priceTotalProduct"
-            app:layout_constraintTop_toBottomOf="@+id/pictureProduct" />
+            app:layout_constraintTop_toBottomOf="@+id/pictureProduct"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/amountProduct"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginStart="71dp"
-            android:layout_marginLeft="71dp"
+            android:layout_width="23dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
+            android:background="@color/labelGray"
+            android:padding="3dp"
             android:text="10"
-            android:textColor="@android:color/black"
+            android:textColor="@color/primaryText"
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageButtonPlus"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageButtonPlus" />
+            app:layout_constraintTop_toTopOf="@+id/imageButtonPlus"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </android.support.constraint.ConstraintLayout>

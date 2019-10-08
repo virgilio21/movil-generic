@@ -10,48 +10,56 @@
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="8dp"
-    app:cardCornerRadius="13dp">
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="25dp">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="10dp">
 
 
         <ImageButton
-            android:id="@+id/ImageButtonMap"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonMap"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginEnd="54dp"
             android:layout_marginRight="54dp"
-            android:background="null"
+            android:background="@drawable/borde_redondo"
             app:layout_constraintBottom_toTopOf="@+id/textViewVerProducts"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textViewYesOrNo"
             app:layout_constraintTop_toBottomOf="@+id/TextViewHomeService"
-            app:srcCompat="@drawable/icons8_mapa_de_pin_64">
+            android:elevation="3dp"
+            android:translationZ="3dp"
+            android:stateListAnimator="@null"
+            app:srcCompat="@drawable/ic_place">
 
         </ImageButton>
 
         <ImageButton
             android:id="@+id/ImageButtonProducts"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="52dp"
             android:layout_marginRight="52dp"
             android:layout_marginBottom="1dp"
-            android:background="null"
+            android:background="@drawable/borde_redondo"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/ImageButtonMap"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonMap"
             app:layout_constraintStart_toEndOf="@+id/textViewVerProducts"
             app:layout_constraintTop_toBottomOf="@+id/TextViewHomeService"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/icons8_producto_usado_64" />
+            android:elevation="3dp"
+            android:translationZ="3dp"
+            android:stateListAnimator="@null"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ic_redeem" />
 
         <ImageView
-            android:id="@+id/pictureProduct"
+            android:id="@+id/pictureEnterprise"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="170dp"
             android:layout_gravity="center"
             android:layout_marginBottom="27dp"
             android:scaleType="centerCrop"
@@ -67,7 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
             android:text="Calle 19 320 Juan Pablo"
-            android:textColor="@android:color/black"
+            android:textColor="@color/primaryText"
+            android:padding="3dp"
+            android:background="@color/labelGray"
             android:textSize="16dp"
             app:layout_constraintBottom_toTopOf="@+id/TextViewHomeService"
             app:layout_constraintEnd_toEndOf="parent"
@@ -80,9 +90,9 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="18dp"
             android:text="Tendejon La esperanza"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/primaryText"
             android:textSize="18dp"
-            app:layout_constraintBottom_toTopOf="@+id/pictureProduct"
+            app:layout_constraintBottom_toTopOf="@+id/pictureEnterprise"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -96,9 +106,9 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:text="Servicio a domicilio: "
-            android:textColor="@android:color/black"
+            android:textColor="@color/primaryText"
             android:textSize="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/ImageButtonMap"
+            app:layout_constraintBottom_toTopOf="@+id/imageButtonMap"
             app:layout_constraintEnd_toStartOf="@+id/textViewYesOrNo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewUbication" />
@@ -109,12 +119,14 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="56dp"
             android:layout_marginRight="56dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/labelGray"
+            android:padding="3dp"
             android:text="Si"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/primaryText"
             android:textSize="16dp"
             app:layout_constraintBottom_toTopOf="@+id/ImageButtonProducts"
-            app:layout_constraintEnd_toStartOf="@+id/ImageButtonMap"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonMap"
             app:layout_constraintStart_toEndOf="@+id/TextViewHomeService" />
 
         <TextView
@@ -127,12 +139,12 @@
             android:layout_marginRight="3dp"
             android:layout_marginBottom="12dp"
             android:text="Ubacición:"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/primaryText"
             android:textSize="16dp"
             app:layout_constraintBottom_toTopOf="@+id/TextViewHomeService"
             app:layout_constraintEnd_toStartOf="@+id/textViewValueCalle"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pictureProduct" />
+            app:layout_constraintTop_toBottomOf="@+id/pictureEnterprise" />
 
         <TextView
             android:id="@+id/textViewVerProducts"
@@ -144,12 +156,12 @@
             android:layout_marginRight="22dp"
             android:layout_marginBottom="11dp"
             android:text="Ver Productos -->"
-            android:textColor="@android:color/background_dark"
+            android:textColor="@color/primaryText"
             android:textSize="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ImageButtonProducts"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ImageButtonMap" />
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonMap" />
 
 
     </android.support.constraint.ConstraintLayout>
