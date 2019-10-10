@@ -3,7 +3,9 @@ package com.genericsl.genericsl;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -24,22 +26,17 @@ public class ProductFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View fragment = inflater.inflate(R.layout.fragment_product,container,false);
 
-        final ArrayList<Source> lista = new ArrayList<Source>();
-        lista.add(new Source("Goku Super Saiyajin","hola",5.0f, 1.0f,R.drawable.p1));
-        lista.add(new Source("Goku Super Saiyajin 2","hola 2",50.0f, 2.0f,R.drawable.p1));
-        lista.add(new Source("Goku Super Saiyajin 3","hola 3",500.0f, 3.0f,R.drawable.p1));
-        lista.add(new Source("Goku Super Saiyajin 4","hola 4",5000.0f, 4.0f,R.drawable.p1));
-        lista.add(new Source("Goku Super Saiyajin 5","hola 5",4000.0f, 5.0f,R.drawable.p1));
-        lista.add(new Source("Goku Super Saiyajin 6","hola 6",400.0f, 6.0f,R.drawable.p1));
-        lista.add(new Source("Goku Super Saiyajin 7","hola 7",40.0f, 7.0f,R.drawable.p1));
-        lista.add(new Source("Goku Super Saiyajin 8","hola 8",4.0f, 8.0f,R.drawable.p1));
+        final ArrayList<Product> lista = new ArrayList<Product>();
+        lista.add(new Product("Sabritas","Doritos 40g",11, 5,R.drawable.doritos));
+        lista.add(new Product("Barcel","Takis 60g",11, 6,R.drawable.takis));
+
 
         final RecyclerView contenedor = (RecyclerView) fragment.findViewById(R.id.contenedor);
         contenedor.setHasFixedSize(true);
         LinearLayoutManager layout = new LinearLayoutManager(fragment.getContext());
-        layout.setOrientation(LinearLayoutManager.VERTICAL);
+        layout.setOrientation(LinearLayoutManager.HORIZONTAL);
 
-        Adapter adapter = new Adapter(lista);
+        AdapterProduct adapter = new AdapterProduct(lista);
 
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,8 +44,38 @@ public class ProductFragment extends Fragment {
                 Toast.makeText(fragment.getContext(),"Seleccionado el item: "+lista.get(contenedor.getChildAdapterPosition(v)).getCompany()+
                                 lista.get(contenedor.getChildAdapterPosition(v)).getPrice()+lista.get(contenedor.getChildAdapterPosition(v)).getRanking()
                         ,Toast.LENGTH_SHORT).show();
+
+                ProductDetailFragment nuevo = new ProductDetailFragment();
+                Bundle bundle = new Bundle();
+
+                //pasar datos de un fragment a otro
+                bundle.putString("empresa",lista.get(contenedor.getChildAdapterPosition(v)).getCompany());
+                bundle.putString("producto",lista.get(contenedor.getChildAdapterPosition(v)).getProduct());
+                bundle.putFloat("precio",lista.get(contenedor.getChildAdapterPosition(v)).getPrice());
+                bundle.putFloat("ranking",lista.get(contenedor.getChildAdapterPosition(v)).getRanking());
+                bundle.putInt("imagen",lista.get(contenedor.getChildAdapterPosition(v)).getImagen());
+                nuevo.setArguments(bundle);
+
+
+                // Abrir el otro fragmente
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment_container, nuevo);
+                transaction.addToBackStack(null);
+                transaction.commit();
+
+
             }
         });
+
+
+        FloatingActionButton btnCar = (FloatingActionButton) fragment.findViewById(R.id.btnCarrito);
+        btnCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(),"Si funciona",Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         contenedor.setAdapter(adapter);
         contenedor.setLayoutManager(layout);
